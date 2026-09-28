@@ -95,14 +95,7 @@
   "repo": "anderiaiman11-cloud/laporanmaganghub",
   "drive": {
     "skrip": {
-      "url": "https://script.google.com/macros/s/AKfycbyTszfOpsonD7XaRuVoM10e6crNc1N27ccvFWraLnuXZ6Gx7ho3V8WxRYvMWypAilNA/exec",
-      "pasang": {
-        "salt": "scTlonEOIVAIIndStFkdzQ==",
-        "iv": "vLg5OnHT2Qox4avW",
-        "data": "uKI2y34FH8xRm24RaIcM4cWEHg498UTQFwJJV0aGIuL0cLBB2xsLRzbs4eoYRoVa",
-        "iter": 310000,
-        "exp": 1790579433742
-      }
+      "url": "https://script.google.com/macros/s/AKfycbyTszfOpsonD7XaRuVoM10e6crNc1N27ccvFWraLnuXZ6Gx7ho3V8WxRYvMWypAilNA/exec"
     }
   },
   "notifikasi": {
