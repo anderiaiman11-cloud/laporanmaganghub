@@ -92,5 +92,10 @@
       "jenis": "cuti"
     }
   ],
-  "repo": "anderiaiman11-cloud/laporanmaganghub"
+  "repo": "anderiaiman11-cloud/laporanmaganghub",
+  "drive": {
+    "skrip": {
+      "url": "https://script.google.com/macros/s/AKfycbyTszfOpsonD7XaRuVoM10e6crNc1N27ccvFWraLnuXZ6Gx7ho3V8WxRYvMWypAilNA/exec"
+    }
+  }
 }
