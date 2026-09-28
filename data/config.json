@@ -1,44 +1,30 @@
 {
-  "repo": "rianfirnanda/laporanmaganghub",
-  "nama": "Rian Firnanda Irsyadani",
-  "posisi": "Asisten Pranata Komputer",
+  "nama": "ANDREI AIMAN OMEGA PUTRA",
+  "posisi": "ASISTEN PRANATA KOMPUTER",
+  "divisi": "",
   "instansi": "BPS Kabupaten Bengkulu Tengah",
   "program": "Program Magang Nasional MagangHub Kemnaker · Batch 2 Tahun 2026",
-  "tanggalMulai": "2026-09-21",
-  "tanggalSelesai": "2027-03-20",
-  "fotoProfil": "uploads/profil/foto-mujcqj7a.jpg",
-  "judulSitus": "Laporan Magang | Rian Firnanda",
+  "tanggalMulai": "2026-08-10",
+  "tanggalSelesai": "2027-02-09",
+  "zonaWaktu": "Asia/Jakarta",
+  "kotaTtd": "",
+  "fotoProfil": "",
+  "judulSitus": "",
   "warnaTema": "#1d4ed8",
   "tampilkanLinkAdmin": true,
   "footer": {
     "teks": "",
-    "kredit": {
-      "tampil": false,
-      "teks": "",
-      "url": "https://rianfirnanda.vercel.app"
-    },
     "judulTautan": "",
-    "bagian": [
-      {
-        "judul": "Tentang",
-        "isi": "Dokumentasi kegiatan harian selama Program Magang Nasional di BPS Kabupaten Bengkulu Tengah."
-      }
-    ],
+    "bagian": [],
     "tautan": []
   },
   "mentor": {
     "nama": "",
     "jabatan": ""
   },
-  "portofolio": "https://rianfirnanda.vercel.app",
-  "ikonSitus": "uploads/brand/ikon-mujei8zm.png",
-  "logoInstansi": "uploads/brand/logo-mujei8zm.png",
-  "drive": {
-    "clientId": "19749227616-7egmua5b0fai2f4md48b3u2fouarpt4r.apps.googleusercontent.com",
-    "skrip": {
-      "url": "https://script.google.com/macros/s/AKfycbzrVAa3tsyXtARVCNQ7CvAg8o4XN-Elgbs1mfbe7fNMftBa27G-Z7dVdi6-ZCRq7npCXQ/exec"
-    }
-  },
+  "portofolio": "",
+  "ikonSitus": "",
+  "logoInstansi": "",
   "hariLibur": [
     {
       "tanggal": "2026-12-24",
@@ -101,11 +87,5 @@
       "jenis": "cuti"
     }
   ],
-  "notifikasi": {
-    "vapidPublik": "BJSzmKzltC3Z1Ul_SJovxZZ0jnxyVzblMre4YChwnPP8FDi8e8hjMGK7XkpaSlL2ej9T7Q9f-QUP_HI-WNJJdJE",
-    "dibuat": "2026-09-27T15:10:45.357Z"
-  },
-  "divisi": "",
-  "kotaTtd": "",
-  "zonaWaktu": "Asia/Jakarta"
+  "repo": "anderiaiman11-cloud/laporanmaganghub"
 }
