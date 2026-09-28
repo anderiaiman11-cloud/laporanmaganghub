@@ -1,20 +1,3 @@
 {
-  "langganan": [
-    {
-      "id": "NMu4WmeeC6MsPSxb",
-      "perangkat": "Windows · Edge",
-      "dibuat": "2026-09-28T06:36:15.073Z",
-      "diperbarui": "2026-09-28T06:36:15.073Z",
-      "kategori": {
-        "ai": true,
-        "data": true,
-        "sistem": true
-      },
-      "enc": {
-        "epk": "BD50Qstg0PQJDdW2dv09UJXXLifFeowd1xklBuwFvJcyRYl5vuSn_822hEoSkjpRhQfxTw2rcSRDcdXGvE8VO_8",
-        "iv": "aVEQ6L52UWoFW6G0",
-        "data": "fm5UV2GfwWFvIBoHARW-VWoUkrMwmqZPdP5syRJbBJZVV4BxVf77E6oUNn6sHo46vEfr7B554wTRxJcEzWSzzIg9d3ga96kqYAXz2qVAILoq-NK-1HCoDqCuPterv9Hw-K8N8Y5RYXQk_0vqPMe8cCM7o3hzQYWxwx4V3SQ8oM-uFphNWQswYZimRmk66F2guA96Zuc4WNFUdDCTbWg5jrfHVB3g0wJSDWWlWhiHXQr73RKkcVUSfLs6ipdu2T6mDO8W3Yfeh_q0HifV-cuqpjmD2SrX9Lc1ZS9A6q4u_givMR0a4dMFsFhdH0lFLHWbCUfNIaH72yVsMWvNqhJerZiBVstGFvHNg4Se0hPDNTTSpPUQjpmUA745mOdMJnf2Lg-j0OhHaOyhaA6rHwBT82iMihZrIUR9ngr34xL6PN7FMCWV9kvm2vVN5Q3C5usIsorRR7QslXzrupXdB1hVWcUdWXRp3UuGbLe1bM2ED70nMkslcnyUTuabpWG3pqyNQeVoSLYZPUSVdthqMHKjSLI8B1dECnJQK0azAdgyT9v-TxYR5Ev8y7BsWNj02K6gEf_vidAIsbROjRK6Sl6R7k7354lwhb75XQLBZUgXn-NtUevYG2UTBYTtTx1bnzBbJlDudEKcZCY1-WGvba2xPojjB4ThwvfJdsih9kLOsUeW5iDXEIWhB0f-C4GrnGJgqUqPYDoSwfMy80M0aEk39L20S8aFuxOZY0ZL_ub8hUkrTMUlMfaHYsShiHUl396rOvZW2Xs"
-      }
-    }
-  ]
+  "langganan": []
 }
