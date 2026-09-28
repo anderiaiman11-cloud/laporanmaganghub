@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <script src="assets/theme.js?v=38"></script>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Laporan Kegiatan Magang</title>
+  <meta name="description" content="Dokumentasi kegiatan harian peserta magang.">
+  <meta name="theme-color" content="#163ba2">
+  <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M22 16h14l8 8v24H22z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M28 34h10M28 41h10' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Setiap CSS/JS diubah, jalankan scripts/naikkan-versi.sh (menaikkan ?v= dan version.json) agar pengunjung otomatis dapat versi terbaru. -->
+  <link rel="stylesheet" href="assets/style.css?v=38">
+</head>
+<body>
+  <nav class="navbar" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span>
+        <span class="brand-text">Laporan<b>magang</b></span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="#harian" data-view="harian">Kegiatan</a>
+        <a href="#galeri" data-view="galeri">Galeri</a>
+        <a href="#rekap" data-view="rekap">Rekap Mingguan</a>
+        <a href="#tentang">Tentang</a>
+        <a class="btn btn-outline nav-print" href="laporan.html?mode=dokumen" data-laporan="dokumen">
+          <svg class="ic" aria-hidden="true"><use href="#i-file"/></svg> Laporan Mingguan
+        </a>
+        <a class="btn btn-outline nav-print" href="laporan.html?mode=slide" data-laporan="slide">
+          <svg class="ic" aria-hidden="true"><use href="#i-image"/></svg> Slide Mingguan
+        </a>
+      </div>
+      <div class="nav-right">
+        <a class="btn btn-outline btn-print-desktop" href="laporan.html?mode=dokumen" data-laporan="dokumen">
+          <svg class="ic" aria-hidden="true"><use href="#i-file"/></svg> Laporan
+        </a>
+        <a class="btn btn-primary btn-print-desktop" href="laporan.html?mode=slide" data-laporan="slide">
+          <svg class="ic" aria-hidden="true"><use href="#i-image"/></svg> Slide
+        </a>
+        <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Ganti mode tampilan">
+          <svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <span class="nav-avatar" id="navAvatar"></span>
+        <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+          <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="copy-note" id="copyNote" hidden role="status">
+    <div class="container">
+      <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
+      <span>Situs ini baru disalin dari milik orang lain dan belum diatur pemiliknya. Pemilik: buka <a href="admin.html">Panel admin</a> lalu pilih <b>Mulai baru</b>.</span>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container"><div class="hero-inner">
+      <div class="profile">
+        <div class="avatar" id="avatar"></div>
+        <div class="profile-text">
+          <h1 id="nama">Memuat…</h1>
+          <div class="chips">
+            <span class="badge-pill" id="posisi"></span>
+            <span class="hero-sub" id="instansi"></span>
+          </div>
+        </div>
+      </div>
+      <div class="progress" id="progress" hidden>
+        <div class="progress-text">
+          <span class="progress-label" id="progressLabel"></span>
+          <span class="progress-sub" id="progressSub"></span>
+          <span class="progress-work" id="progressWork"></span>
+        </div>
+        <svg class="ring" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="27" class="ring-bg"/>
+          <circle cx="32" cy="32" r="27" class="ring-fg" id="ringFg"/>
+          <text x="32" y="36" text-anchor="middle" id="ringText">0%</text>
+        </svg>
+      </div>
+    </div></div>
+  </header>
+
+  <div class="container">
+    <section class="kpis" id="kpis" aria-label="Ringkasan angka"></section>
+  </div>
+
+  <div class="tabbar">
+    <div class="container"><div class="tabbar-inner" role="tablist">
+      <button class="tabbar-item active" type="button" role="tab" data-view="harian">
+        <svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg> <span class="lbl-long">Kegiatan Harian</span><span class="lbl-short">Harian</span>
+      </button>
+      <button class="tabbar-item" type="button" role="tab" data-view="galeri">
+        <svg class="ic" aria-hidden="true"><use href="#i-image"/></svg> <span class="lbl-long">Galeri Foto</span><span class="lbl-short">Galeri</span>
+      </button>
+      <button class="tabbar-item" type="button" role="tab" data-view="rekap">
+        <svg class="ic" aria-hidden="true"><use href="#i-history"/></svg> <span class="lbl-long">Rekap Mingguan</span><span class="lbl-short">Rekap</span>
+      </button>
+    </div></div>
+  </div>
+
+  <main class="container page">
+    <section class="card ai-card" id="aiCard" hidden>
+      <div class="ai-head">
+        <span class="head-icon"><svg class="ic" aria-hidden="true"><use href="#i-sparkles"/></svg></span>
+        <h3 id="aiTitle">Ringkasan minggu ini</h3>
+        <small id="aiUpdated"></small>
+      </div>
+      <p class="ai-text" id="aiText"></p>
+      <ul class="ai-highlights" id="aiHighlights"></ul>
+      <details class="ai-more" id="aiMoreWrap"><summary>Ringkasan keseluruhan magang</summary><p id="aiMore"></p></details>
+    </section>
+
+    <div class="layout">
+      <div class="main-col">
+        <section class="card filters">
+          <label class="search-box filter-search">
+            <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+            <input type="search" id="filterCari" placeholder="Cari kegiatan, lokasi, atau keterangan…" aria-label="Cari kegiatan">
+          </label>
+          <div class="filter-row">
+            <label class="field">
+              <span>Minggu</span>
+              <select id="filterMinggu"><option value="">Semua minggu</option></select>
+            </label>
+            <label class="field">
+              <span>Tanggal</span>
+              <select id="filterTanggal"><option value="">Semua tanggal</option></select>
+            </label>
+          </div>
+          <div class="filter-foot">
+            <span id="resultInfo" aria-live="polite"></span>
+            <button class="btn btn-link btn-sm" id="btnReset" type="button" hidden><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg> Hapus filter</button>
+          </div>
+        </section>
+
+        <section id="view-harian" class="view" aria-live="polite"><p class="empty">Memuat kegiatan…</p></section>
+        <section id="view-galeri" class="view" hidden></section>
+        <section id="view-rekap" class="view" hidden></section>
+      </div>
+
+      <aside class="side-col">
+        <section class="card">
+          <div class="card-header"><h3>Info Instansi &amp; Mentor</h3></div>
+          <div class="card-body side-body">
+            <div class="org">
+              <span class="org-logo" id="orgLogo"></span>
+              <div>
+                <strong id="orgName"></strong>
+                <span id="orgRole"></span>
+              </div>
+            </div>
+            <p class="org-program" id="orgProgram" hidden></p>
+            <div id="mentorBox" hidden>
+              <div class="side-label">Mentor Pembimbing</div>
+              <div class="org">
+                <span class="org-logo soft" id="mentorLogo"></span>
+                <div>
+                  <strong id="mentorName"></strong>
+                  <span id="mentorRole"></span>
+                </div>
+              </div>
+            </div>
+            <div class="side-label">Periode Magang</div>
+            <dl class="kv" id="periode"></dl>
+            <p class="next-libur" id="nextLibur" hidden></p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header"><h3>Laporan mingguan</h3></div>
+          <div class="card-body side-body">
+            <p class="side-note" id="reportNote">Unduh laporan resmi (A4) atau slide presentasi mingguan.</p>
+            <div class="side-actions">
+              <a class="btn btn-primary" href="laporan.html?mode=dokumen" data-laporan="dokumen"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg> Laporan (A4)</a>
+              <a class="btn btn-outline" href="laporan.html?mode=slide" data-laporan="slide"><svg class="ic" aria-hidden="true"><use href="#i-image"/></svg> Slide</a>
+            </div>
+            <p class="updated" id="updated"></p>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="tentang">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-grid" id="footerGrid"></div>
+        <div class="footer-bar">
+          <div class="footer-clock" title="Waktu dari server, bukan dari jam perangkat">
+            <span class="clock-icon" aria-hidden="true">
+              <svg class="ic"><use href="#i-clock"/></svg>
+              <span class="live-dot"></span>
+            </span>
+            <span class="clock-text"><span class="clock-line"><strong class="sc-time" id="footerTime">--.--.--</strong><span class="clock-src" id="footerSrc">waktu server</span></span><small id="footerDate"></small></span>
+          </div>
+          <a class="btn btn-sm footer-admin" href="admin.html" id="adminLink" hidden>
+            <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Panel admin
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span id="footerText"></span>
+        <a id="portoLink" target="_blank" rel="noopener" hidden></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="reportModal" hidden role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+    <div class="modal-box">
+      <div class="card-header">
+        <span class="head-icon"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span>
+        <div class="head-text"><h3 id="reportTitle">Laporan harian</h3><span id="reportSub"></span></div>
+        <button class="icon-btn" type="button" id="reportClose" aria-label="Tutup"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="card-body report-view" id="reportBody"></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Tutup"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Sebelumnya">‹</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Berikutnya">›</button>
+  </div>
+
+  <script src="assets/common.js?v=38"></script>
+  <script src="assets/app.js?v=38"></script>
+</body>
+</html>
