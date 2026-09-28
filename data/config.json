@@ -1,5 +1,5 @@
 {
-  "nama": "ANDREI AIMAN OMEGA PUTRA",
+  "nama": "Andrei Aiman Omega Putra",
   "posisi": "ASISTEN PRANATA KOMPUTER",
   "divisi": "",
   "instansi": "BPS Kabupaten Bengkulu Tengah",
@@ -14,6 +14,11 @@
   "tampilkanLinkAdmin": true,
   "footer": {
     "teks": "",
+    "kredit": {
+      "tampil": false,
+      "teks": "",
+      "url": ""
+    },
     "judulTautan": "",
     "bagian": [],
     "tautan": []
