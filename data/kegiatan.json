@@ -1,5 +1,28 @@
 [
   {
+    "id": "20260929-mum5gqxd",
+    "tanggal": "2026-09-29",
+    "jam": "11:02",
+    "sesi": "Siang",
+    "judul": "survei lapangan revisit/penyisiran pendataan sensus ekonomi 2026",
+    "lokasi": "Sekayun Ilir, Bengkulu Tengah",
+    "keterangan": "survei lapangan revisit/penyisiran pendataan sensus ekonomi 2026",
+    "foto": [
+      "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe0.jpg",
+      "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe1.jpg"
+    ],
+    "koordinat": {
+      "lat": -3.5961,
+      "lng": 102.330236,
+      "akurasi": 14
+    },
+    "dicatat": "2026-09-29T04:02:08.538Z",
+    "fotoKecil": {
+      "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe0.jpg": "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe0-t.jpg",
+      "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe1.jpg": "uploads/2026/09/29/20260929-mum5gqxd-mum5gqxe1-t.jpg"
+    }
+  },
+  {
     "id": "20260928-mukvtjkp",
     "tanggal": "2026-09-28",
     "jam": "13:44",
